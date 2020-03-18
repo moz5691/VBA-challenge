@@ -76,7 +76,7 @@ Sub Stock_Report()
                         .Font.Color = vbBlue
                     End With
                 Else
-                    'negative change - rad background/white font
+                    'negative change - red background/white font
                     With ws.Cells(row_count, 10)  'Yearly Change column
                         .Interior.ColorIndex = 3
                         .Font.Color = vbWhite
