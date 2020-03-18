@@ -2,8 +2,8 @@ Sub Stock_Report()
 
 'To deal with large dataset, code should be efficient.
 'The idea is check <prev> <current> <next> rows.
-'If <prev> == <current>, the beginning of new ticker
-'if <current> == <next>, the end of the current ticker.
+'If not <prev> == <current>, the beginning of new ticker
+'if not <current> == <next>, the end of the current ticker.
 'Using one for-loop for volume/change from all tickers
 'Using one for-loop for best/worst performance tickers.
     
@@ -76,7 +76,7 @@ Sub Stock_Report()
                         .Font.Color = vbBlue
                     End With
                 Else
-                    'negative change - read background/white font
+                    'negative change - rad background/white font
                     With ws.Cells(row_count, 10)  'Yearly Change column
                         .Interior.ColorIndex = 3
                         .Font.Color = vbWhite
